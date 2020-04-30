@@ -21,13 +21,13 @@ qcount = 0
 products=[] #List to store name of the product
 prices=[] #List to store price of the product
 ratings=[] #List to store ratings of the product
-no_pages = 20
+no_pages = 15
 
 
 def get_data(pageNo,q):  
     headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
     
-    r = requests.get("https://www.amazon.com/s?k=laptops&page="+str(pageNo), headers=headers)#, proxies=proxies)
+    r = requests.get("https://www.amazon.in/s?k=shampoo&page="+str(pageNo), headers=headers)#, proxies=proxies)
     content = r.content
     soup = BeautifulSoup(content)
     #print(soup.encode('utf-8')) # uncomment this in case there is some non UTF-8 character in the content and
